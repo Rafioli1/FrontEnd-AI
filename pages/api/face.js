@@ -1,9 +1,12 @@
-const ADD_URL = new URL('https://localhost:3003/add')
-const DELETE_URL = new URL('https://localhost:3003/delete')
+const ADD_URL = new URL('http://localhost:3003/add')
+const DELETE_URL = new URL('http://localhost:3003/delete')
+
 
 const addFace = async (name) => {
+  console.log(name)
   var requestOptions = {
-    body: JSON.stringify({name: name}),
+    body: JSON.stringify({username: name}),
+    headers: { 'Content-Type': 'application/json' },
     method: 'POST',
     redirect: 'follow'
   };

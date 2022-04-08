@@ -21,27 +21,35 @@ const Notifications = () => {
         const [stringData, setStringData] = useState("");
 
         async function GetInfo () {
-            const response = await fetch('https://randomuser.me/api/'); //put url here of /detect http://localhost:3000/detect
+            console.log("THIS SHOULD PRINT entered getinfo")
+            const response = await fetch('http://localhost:3003/status'); //put url here of /detect http://localhost:3000/detect
+            console.log("THIS SHOULD PRINT after response")
             const data =  await response.json();
+            console.log("THIS SHOULD PRINT after data")
             setStringData(JSON.stringify(data, null,2));
-            setResponse(data.results[0]);
+            setResponse(data.results);
+            console.log("THIS SHOULD PRINT")
             if(response != null){
                 setOpenModal(true);
-                setName(response.name.first);
-                
+                setName(response.user);
+                console.log(name)
+                console.log("no response")
             }
-            else if(response == null){
+            else if(response.user == "unknown"){
+                console.log("no response")
                 setUnrecognizedPerson(true);
                 setOpenModal(true);
             }
         }
         const handleClick = () => {
+            console.log("THIS SHOULD PRINT handleclick 2")
             if(intervalId){
                 clearInterval(intervalId);
                 setIntervalId(0);
                 return;
             }
             const newIntervalId = setInterval(() => {
+                console.log("THIS SHOULD PRINT interval")
                 GetInfo();
             }, 2000);
             setIntervalId(newIntervalId);
