@@ -1,6 +1,8 @@
 import styles from '../styles/Home.module.css'
+import React, { useState, useEffect } from "react";
 import Head from 'next/head'
 import Image from 'next/image'
+import { addFace } from './api/face'
 import { useRouter } from 'next/router';
 import Button from '@mui/material/Button';
 import Image2 from "../public/profile1.jpg";
@@ -12,6 +14,7 @@ import Image7 from "../public/profile11.jpg";
 import Image8 from "../public/profile8.jpg";
 import Image9 from "../public/portrait12.jpg";
 import Image10 from "../public/profile13.jpg";
+import Empty from "../public/empty.jpg";
 
 function openForm() {
     document.getElementById("myForm").style.display = "block";
@@ -21,6 +24,59 @@ function closeForm() {
     document.getElementById("myForm").style.display = "none";
 }
 
+const ProfileInput = ({ onSubmit }) => {
+    const [input, setInput] = useState("");
+  
+    return (
+      <div>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            onSubmit(input);
+            setInput("");
+            addFace(input);
+          }}
+        >
+          <input value={input} onChange={(e) => setInput(e.target.value)} />
+        </form>
+      </div>
+    );
+  };
+  
+  const AddProfiles = () => {
+    const [list, setList] = useState([]);
+    
+    const removeItem = (index) => {
+        setList(list.filter((o, i) => index !== i));
+    };
+  
+    return (
+      <div>
+        <ProfileInput
+          onSubmit={(value) =>
+            setList([{ value: value, complete: false }, ...list])
+          }
+        />
+        {list.map(({ value, complete }, i) => (
+          <div
+            key={i}
+            onClick={() => removeItem(i)}
+            style={{
+              textDecoration: complete ? "line-through" : ""
+            }}
+          >
+            <div class = "Row3">
+                <div class ="prof10">
+                <Image src={Empty} width = "200" height = "220"></Image>
+                <h3>{value}</h3>
+                </div>
+            </div>
+          </div>
+        ))}
+        <br />
+      </div>
+    );
+  }
 export default function Profile (){
     const router = useRouter();
     return(
@@ -30,27 +86,12 @@ export default function Profile (){
                 Profiles 
                 </h1>
             </div>
-            <div class = "Row0">
-        
-                <div class="addButton">
-                    <Button
-                        onClick={() => {
-                            router.push("/add")
-                            }}
-                          >          
-                          Add Face
-                    </Button>
-                </div>
+            <div class ="RowN">
+                <h3>Add Name of Person</h3>
+            </div>
 
-                <div class="deleteButton">
-                    <Button
-                    onClick={() => {
-                    router.push("/delete")
-                    }}
-                    >          
-                    Delete Face
-                    </Button>
-                </div>
+            <div class = "Row0">
+                    <AddProfiles/>
             </div>
 
 
