@@ -1,0 +1,288 @@
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: rgb(17,0,36);
+  background: linear-gradient(90deg, rgba(17,0,36,1) 0%, rgba(140,72,185,1) 0%, rgba(0,160,255,1) 100%);;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h3{
+  font-size: medium;
+}
+
+
+.profileButton{
+  margin-top: 10px;
+  margin-right: 12px;
+  padding: 10px 18px;
+  background-color: white;
+  border: black;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 12px;
+}
+
+.aboutButton{
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 10px 18px;
+  background-color: white;
+  border: black;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 12px;
+}
+
+.homeButtons{
+  margin-top: 20px;
+  display:flex;
+  margin-bottom: 20px;
+}
+
+.watchImg{
+  margin-bottom: 12px;
+}
+.abtitle{
+  margin-top: 15px;
+  position:absolute;
+  top:0;
+  margin-bottom: 50px;
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.abtitle h1{
+  text-align: center;
+}
+
+.title{
+  margin-top: 15px;
+  position:absolute;
+  top:0;
+  margin-bottom: 50px;
+  text-decoration: underline;
+}
+
+.Row0{
+  margin-top: 50px;
+  display:flex;
+}
+.Row1{
+  margin-top: 50px;
+  display:flex;
+}
+
+.Row2{
+  display:flex;
+  margin-top: 30px;
+}
+
+.Row3{
+  display:flex;
+  margin-top: 30px;
+}
+
+.prof1{
+  margin-right: 30px;
+  border: 4px solid black;
+  border-radius: 9px;
+  background-color:cornflowerblue;
+}
+
+.prof1 h3{
+  margin-left: 75px;
+  font-size: larger;
+}
+
+.prof2{
+  margin-right: 30px;
+  margin-left: 30px;
+  border: 4px solid black;
+  border-radius: 9px;
+  background-color:cornflowerblue;
+}
+
+.prof2 h3{
+  margin-left: 75px;
+  font-size: larger;
+}
+
+.prof3{
+  margin-left: 30px;
+  border: 4px solid black;
+  border-radius: 9px;
+  background-color:cornflowerblue;
+}
+
+.prof3 h3{
+  margin-left: 72px;
+  font-size: larger;
+}
+
+.prof4{
+  margin-right: 30px;
+  border: 4px solid black;
+  border-radius: 9px;
+  background-color:cornflowerblue;
+}
+
+.prof4 h3{
+  margin-left: 70px;
+  font-size: larger;
+}
+
+
+.prof5{
+  margin-right: 30px;
+  margin-left: 30px;
+  border: 4px solid black;
+  border-radius: 9px;
+  background-color:cornflowerblue;
+}
+
+.prof5 h3{
+  margin-left: 75px;
+  font-size: larger;
+}
+
+.prof6{
+  margin-left: 30px;
+  border: 4px solid black;
+  border-radius: 9px;
+  background-color:cornflowerblue;
+}
+
+.prof6 h3{
+  margin-left: 72px;
+  font-size: larger;
+}
+
+
+.prof7{
+  margin-right: 30px;
+  border: 4px solid black;
+  border-radius: 9px;
+  background-color:cornflowerblue;
+}
+
+.prof7 h3{
+  margin-left: 70px;
+  font-size: larger;
+}
+
+
+.prof8{
+  margin-right: 30px;
+  margin-left: 30px;
+  border: 4px solid black;
+  border-radius: 9px;
+  background-color:cornflowerblue;
+}
+
+.prof8 h3{
+  margin-left: 75px;
+  font-size: larger;
+}
+
+
+.prof9{
+  margin-left: 30px;
+  border: 4px solid black;
+  border-radius: 9px;
+  background-color:cornflowerblue;
+}
+
+.prof9 h3{
+  margin-left: 70px;
+  font-size: larger;
+}
+
+
+.addButton{
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 10px 18px;
+  background-color: rgb(74, 222, 106);
+  border: black;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 12px;
+  margin-right: 15px;
+  ;
+}
+.addButton :hover{
+  color:aliceblue;
+
+}
+
+.deleteButton{
+  margin-top: 10px;
+  margin-left: 10px;
+  
+  padding: 10px 18px;
+  background-color: rgb(207, 59, 59);
+  border: black;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 12px;
+}
+
+.deleteButton :hover{
+  color:aliceblue;
+
+}
+
+.subtitle {
+	padding-left: 10px;
+	padding-top: 0px;
+	margin-bottom: 0px;
+	margin-top: 10px;
+  margin-right: 0px;
+  text-align: left;
+  margin-right: auto;
+  text-decoration: underline;
+}
+
+.textbox {
+	float: left;
+	background-color: rgb(51, 51, 51);
+	color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 0px;
+  margin-left: 20px;
+  margin-right: 400px;
+	border: 3px solid black;
+	border-bottom-left-radius: 25px;
+	border-top-right-radius: 25px;
+}
+
+.addForm{
+  background-color: black;
+}
+
+.subb{
+  margin-top: 10px;
+  margin-right: 50px;
+  margin-left: 6px;
+  padding: 10px 40px;
+  background-color: white;
+  border: black;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 12px;
+}
